@@ -86,6 +86,16 @@
     "typescript": "5.2.2",
     "util": "0.12.5"
   },
+  "overrides": {
+    "nx": {
+      "brace-expansion": "^5.0.9"
+    },
+    "lerna": {
+      "nx": {
+        "brace-expansion": "^5.0.9"
+      }
+    }
+  },
   "workspaces": [
     "api",
     "packages/*",
