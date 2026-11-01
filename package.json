@@ -76,7 +76,7 @@
     "lerna": "10.1.1",
     "linkinator": "7.6.1",
     "markdownlint-cli2": "0.24.0",
-    "nx": "22.7.8",
+    "nx": "22.7.12",
     "prettier": "3.6.2",
     "process": "0.11.10",
     "semver": "7.8.5",
