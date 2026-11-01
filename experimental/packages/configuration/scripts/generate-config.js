@@ -16,7 +16,7 @@
 'use strict';
 
 const { compile } = require('json-schema-to-typescript');
-const { spawnSync, execSync } = require('child_process');
+const { spawnSync, execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const Ajv = require('ajv/dist/2020');
@@ -286,7 +286,7 @@ compile(schema, 'OpenTelemetryConfiguration', {
 
     fs.mkdirSync(path.dirname(TYPES_PATH), { recursive: true });
     fs.writeFileSync(TYPES_PATH, ts);
-    execSync(`npm run lint:fix -- ${TYPES_PATH}`, {
+    execFileSync('npm', ['run', 'lint:fix', '--', TYPES_PATH], {
       cwd: TOP,
       encoding: 'utf8',
     });
